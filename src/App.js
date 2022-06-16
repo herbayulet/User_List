@@ -6,9 +6,12 @@ import { Container } from "react-bootstrap";
 import axios from "axios";
 
 const App = () => {
+  // menampung data dari API dan manipulasi data nya tersebut
   const [users, setUser] = useState([]);
+  // URL API nya
   const API = "https://reqres.in/api/users";
 
+  // Untuk Consume API
   const getUser = () => {
     axios.get(API).then((response) => {
       console.log(response, "ini response");

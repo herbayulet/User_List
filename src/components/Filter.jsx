@@ -3,12 +3,15 @@ import { Container, Form } from "react-bootstrap";
 import Listuser from "./Listuser";
 
 export const Filter = ({ users }) => {
+  // menampung inputan yang kita masukan ke dalam form
   const [search, setNewSearch] = useState("");
 
+  // merubah ketikan yang kita masukan ke dalam form input
   const handleSearchChange = (e) => {
     setNewSearch(e.target.value);
   };
 
+  // untuk memfilter dan membuat value yang ada di dalam API menjadi huruf kecil semua
   const filtered = !search ? users : users.filter((user) => user.first_name.toLowerCase().includes(search.toLowerCase()) || user.email.toLowerCase().includes(search.toLowerCase()));
 
   return (

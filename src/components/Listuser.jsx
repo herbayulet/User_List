@@ -7,6 +7,7 @@ const Listuser = ({ data }) => {
     <>
       <Container className="mt-5 dp-flex">
         <Row>
+          {/* looping data dari GET API */}
           {data.map((dataBaru, i) => {
             return (
               <Col md={4} mt="2" key={i}>
